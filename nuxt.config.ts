@@ -18,5 +18,6 @@ export default defineNuxtConfig({
     //   FieldArray: 'VeeFieldArray',
     //   ErrorMessage: 'VeeErrorMessage',
     // },
-  }
+  },
+  ssr: false
 })

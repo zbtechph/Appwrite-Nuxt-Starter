@@ -26,7 +26,11 @@
   subscribe()
 
   definePageMeta({
-    middleware: ['guest']
+    middleware: ['guest'],
+  })
+
+  useHead({
+    title: "Login"
   })
 
 </script>

@@ -46,6 +46,10 @@
     middleware: "guest"
   })
 
+  useHead({
+    title: "Registration"
+  })
+
 </script>
 
 <template>

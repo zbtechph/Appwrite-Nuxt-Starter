@@ -6,4 +6,8 @@
 
 <script lang="ts" setup>
 
+  useHead({
+    title: "Home"
+  })
+
 </script>

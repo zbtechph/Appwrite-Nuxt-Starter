@@ -28,4 +28,10 @@
       })
   }
 
+  useHead({
+    // as a string,
+    // where `%s` is replaced with the title
+    titleTemplate: '%s - AppName',
+  })
+
 </script>

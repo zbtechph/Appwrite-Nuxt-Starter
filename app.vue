@@ -6,15 +6,13 @@
   </div>
 </template>
 <script setup lang="ts">
+import { useMySessionStore } from "./stores/session";
 
-  import { useMySessionStore } from './stores/session';
+const sessionStore = useMySessionStore();
 
-  const sessionStore = useMySessionStore()
+const { execute } = useAsyncData("session-init", () => sessionStore.init(), {
+  immediate: false,
+});
 
-  const { execute } = useAsyncData('session-init', () => sessionStore.init(), {
-    immediate: false
-  })
-
-  onMounted(() => execute())
-  
+onMounted(() => execute());
 </script>

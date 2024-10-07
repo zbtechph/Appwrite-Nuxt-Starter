@@ -1,7 +1,5 @@
 export default defineNuxtRouteMiddleware((to) => {
+  const { redirectIfAuthenticated } = useGuest();
 
-    const { redirectIfAuthenticated } = useGuest()
-
-    return redirectIfAuthenticated(to)
-
-})
+  return redirectIfAuthenticated(to);
+});

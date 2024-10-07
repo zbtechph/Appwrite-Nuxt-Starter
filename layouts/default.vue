@@ -18,20 +18,17 @@
 </template>
 
 <script lang="ts" setup>
+const sessionStore = useMySessionStore();
 
-  const sessionStore = useMySessionStore()
+function logout() {
+  sessionStore.destroyCurrent().then(() => {
+    navigateTo("/login");
+  });
+}
 
-  function logout(){
-    sessionStore.destroyCurrent()
-      .then(() => {
-        navigateTo("/login")
-      })
-  }
-
-  useHead({
-    // as a string,
-    // where `%s` is replaced with the title
-    titleTemplate: '%s - AppName',
-  })
-
+useHead({
+  // as a string,
+  // where `%s` is replaced with the title
+  titleTemplate: "%s - AppName",
+});
 </script>

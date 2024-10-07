@@ -3,13 +3,13 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       appwriteEndpoint: "",
-      appwriteProjectId: ""
-    }
+      appwriteProjectId: "",
+    },
   },
 
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: "2024-04-03",
   devtools: { enabled: false },
-  modules: ['@pinia/nuxt', '@vee-validate/nuxt', '@nuxt/eslint'],
+  modules: ["@pinia/nuxt", "@vee-validate/nuxt", "@nuxt/eslint"],
   veeValidate: {
     autoImports: false,
     // componentNames: {
@@ -19,5 +19,5 @@ export default defineNuxtConfig({
     //   ErrorMessage: 'VeeErrorMessage',
     // },
   },
-  ssr: false
-})
+  ssr: false,
+});

@@ -1,16 +1,13 @@
 <template>
-  <div>
-    Profile Page
-  </div>
+  <div>Profile Page</div>
 </template>
 
 <script lang="ts" setup>
-  definePageMeta({
-    middleware: ['auth']
-  })
+definePageMeta({
+  middleware: ["auth"],
+});
 
-  useHead({
-    title: "Profile"
-  })
-
+useHead({
+  title: "Profile",
+});
 </script>

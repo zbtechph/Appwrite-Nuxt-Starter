@@ -40,7 +40,7 @@ export const useMySessionStore = defineStore('mySessionStore', () => {
       })
   }
 
-  function destroyById(id: string): Promise<{}>{
+  function destroyById(id: string): Promise<boolean>{
     return appwrite.account.deleteSession(id)
       .then(() => {
         const index = sessions.value.findIndex(session => session.$id === id)
@@ -52,7 +52,7 @@ export const useMySessionStore = defineStore('mySessionStore', () => {
             sessions.value.pop()
           }
         }
-        return {}
+        return true
       })
   }
 
@@ -91,7 +91,7 @@ export const useMySessionStore = defineStore('mySessionStore', () => {
           sessions.value.push(response)
         }
         return true;
-      }).catch(err => {
+      }).catch(() => {
         return false
       })
   }

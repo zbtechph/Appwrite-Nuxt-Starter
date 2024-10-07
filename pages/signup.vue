@@ -3,7 +3,6 @@
   import { useForm } from 'vee-validate'
   import { toTypedSchema } from '@vee-validate/zod';
 
-  const router = useRouter()
   const account = useMyAccountStore()
 
   const { defineField, values, errors, setFieldError } = useForm({
@@ -56,9 +55,9 @@
   <div>
     <h1>Create an account</h1>
     <form @submit.prevent="createAccount">
-      <MyInput as="text" label="Name" v-model="name" :errors="errors.name"/>
-      <MyInput as="email" label="Email" v-model="email" :errors="errors.email"/>
-      <MyInput as="password" label="Password" v-model="password" :errors="errors.password"/>
+      <MyInput v-model="name" as="text" label="Name" :errors="errors.name"/>
+      <MyInput v-model="email" as="email" label="Email" :errors="errors.email"/>
+      <MyInput v-model="password" as="password" label="Password" :errors="errors.password"/>
       <button type="submit">Sign Up</button>
     </form>
   </div>

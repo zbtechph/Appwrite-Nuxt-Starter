@@ -38,8 +38,8 @@
   <div>
     <h1>Login Page</h1>
     <form @submit.prevent="attemptLogin">
-      <MyInput as="email" label="Email" v-model="email" :errors="errors.email"/>
-      <MyInput as="password" label="Password" v-model="password" :errors="errors.password"/>
+      <MyInput v-model="email" as="email" label="Email" :errors="errors.email"/>
+      <MyInput v-model="password" as="password" label="Password" :errors="errors.password"/>
       <div>
         <button type="submit">Sign In</button>
       </div>

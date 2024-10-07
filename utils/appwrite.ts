@@ -1,4 +1,4 @@
-import { Client, Databases, ID, Account } from 'appwrite';
+import { Client, Databases, Account } from 'appwrite';
 
 class AppwriteService {
 
